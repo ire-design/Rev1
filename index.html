@@ -7,7 +7,29 @@
 </head>
 <body>
     <table>
-        <caption></caption>
+        <caption>Sample Table</caption>
     </table>
+
+    <h1 onclick="changeText(this)">Click here</h1>
+    <button class="myBtn">Try</button>
+
+    <p>click e btn</p>
+    <input type="button" onclick="hello()" value="click me">
+
+    <script>
+        function changeText(element) {
+            element.innerHTML = "Oops!"
+        }
+
+        document.querySelector(".myBtn").onclick = displayDate;
+
+        function displayDate() {
+            alert("Button clicked!");
+        }
+
+        function hello(){
+            alert("Hello, World!");
+        }
+    </script>
 </body>
 </html>
