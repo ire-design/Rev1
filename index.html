@@ -16,6 +16,13 @@
     <p>click e btn</p>
     <input type="button" onclick="hello()" value="click me">
 
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <input type="submit" value="submit">
+    </form>
+    <div id="output"> </div>
+
     <script>
         function changeText(element) {
             element.innerHTML = "Oops!"
@@ -30,6 +37,21 @@
         function hello(){
             alert("Hello, World!");
         }
+
+        function validateForm(){
+            let name = document.getElementById("name").value
+            if(name === ""){
+                alert("Name must be filled out")
+                event.preventDefault();
+                return false
+            }
+        
+        event.preventDefault()
+       
+
+        document.getElementById("output").innerHTML = "Submitted name: " + name
+        return false
+    }
     </script>
 </body>
 </html>
