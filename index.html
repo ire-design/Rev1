@@ -52,6 +52,20 @@
         document.getElementById("output").innerHTML = "Submitted name: " + name
         return false
     }
+
+    let userResponse = confirm("Do you agree to the terms?");
+        if (userResponse) {
+            alert("You agreed!");
+        } else {
+            alert("You did not agree.");
+        }
+
+    let response = confirm("are you sure about this")
+        if (response) {
+            alert("You pressed OK!");
+        } else {
+            alert("You pressed Cancel!");
+        }
     </script>
 </body>
 </html>
